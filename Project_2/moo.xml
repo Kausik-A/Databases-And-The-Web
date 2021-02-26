@@ -1,0 +1,156 @@
+<mo>
+<customers>
+<customer cno="1111">
+<cname>Charles</cname>
+<street>123 Main St.</street>
+<city>Wichita</city>
+<zip>67226</zip>
+<phone>316-636-5555</phone>
+</customer>
+<customer cno="2222">
+<cname>Bertram</cname>
+<street>237 Ash Avenue</street>
+<city>Wichita</city>
+<zip>67226</zip>
+<phone>316-689-5555</phone>
+</customer>
+<customer cno="3333">
+<cname>Barbara</cname>
+<street>111 Inwood St.</street>
+<city>Fort Dodge</city>
+<zip>60606</zip>
+<phone>316-111-1234</phone>
+</customer>
+</customers>
+<employees>
+<employee eno="1000">
+<ename>Jones</ename>
+<city>Wichita</city>
+<zip>67226</zip>
+<hdate>1995-12-12</hdate>
+</employee>
+<employee eno="1001">
+<ename>Smith</ename>
+<city>Fort Dodge</city>
+<zip>60606</zip>
+<hdate>1992-01-01</hdate>
+</employee>
+<employee eno="1002">
+<ename>Brown</ename>
+<city>Kansas City</city>
+<zip>50302</zip>
+<hdate>1994-09-01</hdate>
+</employee>
+</employees>
+<parts>
+<part pno="10506">
+<pname>Land Before Time I</pname>
+<qoh>200</qoh>
+<price>19.99</price>
+<level>20</level>
+</part>
+<part pno="10507">
+<pname>Land Before Time II</pname>
+<qoh>156</qoh>
+<price>19.99</price>
+<level>20</level>
+</part>
+<part pno="10508">
+<pname>Land Before Time III</pname>
+<qoh>190</qoh>
+<price>19.99</price>
+<level>20</level>
+</part>
+<part pno="10509">
+<pname>Land Before Time IV</pname>
+<qoh>60</qoh>
+<price>19.99</price>
+<level>20</level>
+</part>
+<part pno="10601">
+<pname>Sleeping Beauty</pname>
+<qoh>300</qoh>
+<price>24.99</price>
+<level>20</level>
+</part>
+<part pno="10701">
+<pname>When Harry Met Sally</pname>
+<qoh>120</qoh>
+<price>19.99</price>
+<level>30</level>
+</part>
+<part pno="10800">
+<pname>Dirty Harry</pname>
+<qoh>140</qoh>
+<price>14.99</price>
+<level>30</level>
+</part>
+<part pno="10900">
+<pname>Dr. Zhivago</pname>
+<qoh>100</qoh>
+<price>24.99</price>
+<level>30</level>
+</part>
+</parts>
+<orders>
+<order ono="1020" takenBy="1000" customer="1111">
+<receivedDate>1994-12-10</receivedDate>
+<shippedDate>1994-12-12</shippedDate>
+<items>
+<item>
+<partNumber>10506</partNumber>
+<quantity>1</quantity>
+</item>
+<item>
+<partNumber>10507</partNumber>
+<quantity>1</quantity>
+</item>
+<item>
+<partNumber>10508</partNumber>
+<quantity>2</quantity>
+</item>
+<item>
+<partNumber>10509</partNumber>
+<quantity>3</quantity>
+</item>
+</items>
+</order>
+<order ono="1021" takenBy="1000" customer="1111">
+<receivedDate>1995-01-12</receivedDate>
+<shippedDate>1995-01-15</shippedDate>
+<items>
+<item>
+<partNumber>10601</partNumber>
+<quantity>4</quantity>
+</item>
+</items>
+</order>
+<order ono="1022" takenBy="1001" customer="2222">
+<receivedDate>1995-02-13</receivedDate>
+<shippedDate>1995-02-20</shippedDate>
+<items>
+<item>
+<partNumber>10601</partNumber>
+<quantity>1</quantity>
+</item>
+<item>
+<partNumber>10701</partNumber>
+<quantity>1</quantity>
+</item>
+</items>
+</order>
+<order ono="1023" takenBy="1000" customer="3333">
+<receivedDate>1997-01-20</receivedDate>
+<items>
+<item>
+<partNumber>10800</partNumber>
+<quantity>1</quantity>
+</item>
+<item>
+<partNumber>10900</partNumber>
+<quantity>1</quantity>
+</item>
+</items>
+</order>
+</orders>
+</mo>
