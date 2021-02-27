@@ -94,7 +94,44 @@ xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 
     <!--Parts -->
 
+
+    <xsd:complexType name="partstag">
+            <xsd:sequence>
+                <xsd:element name="part" minOccurs="0" maxOccurs="unbounded" type="mychild3"/>
+            </xsd:sequence>
+    </xsd:complexType>
+
+
+    <xsd:simpleType name="fourdigits3">
+            <xsd:restriction base="xsd:int">
+                <xsd:minInclusive value="10000"/>
+                <xsd:maxInclusive value="99999"/>
+            </xsd:restriction>
+        </xsd:simpleType>  
     
+    <xsd:complexType name="mychild3" >
+         
+        <xsd:sequence>
+            <xsd:element name="pname" type="xsd:string"/>
+            <xsd:element name="qoh" type="xsd:positiveInteger"/>
+            <xsd:element name="price" type="twofraction"/>
+            <xsd:element name="level" type="xsd:positiveInteger"/>
+        </xsd:sequence>
+
+        <xsd:attribute name="pno" type="fourdigits3" use="required" /> 
+    </xsd:complexType>
+
+    <xsd:simpleType name="twofraction">
+        <xsd:restriction base="xsd:decimal">
+            <xsd:fractionDigits value="2" />
+            <xsd:minExclusive value="0" />
+            <xsd:pattern value="\d+\.\d{2}" />
+        </xsd:restriction>
+    </xsd:simpleType>
+
+     <!-- orders -->
+
+
 
 
 
