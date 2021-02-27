@@ -8,7 +8,7 @@ xmlns:xsd="http://www.w3.org/2001/XMLSchema">
     <xsd:complexType name="motype">
         <xsd:sequence>
             <xsd:element name="customers" type="customerstag" minOccurs="0" maxOccurs="unbounded"/>
-            <xsd:element name="employees" type="employeestag"/>
+            <xsd:element name="employees" type="employeestag" minOccurs="0" maxOccurs="unbounded"/>
             <xsd:element name="parts" type="partstag"/>
             <xsd:element name="orders" type="orderstag"/>
         </xsd:sequence>
@@ -56,6 +56,51 @@ xmlns:xsd="http://www.w3.org/2001/XMLSchema">
     </xsd:simpleType> 
 
     <!--- Employee part -->
+
+    <xsd:complexType name="employeestag">
+            <xsd:sequence>
+                <xsd:element name="employee" minOccurs="0" maxOccurs="unbounded" type="mychild2"/>
+            </xsd:sequence>
+    </xsd:complexType>
+
+
+    <xsd:simpleType name="fourdigits2">
+            <xsd:restriction base="xsd:int">
+                <xsd:minInclusive value="1000"/>
+                <xsd:maxInclusive value="9999"/>
+            </xsd:restriction>
+        </xsd:simpleType>  
+    
+    <xsd:complexType name="mychild2" >
+         
+        <xsd:sequence>
+            <xsd:element name="ename" type="xsd:string"/>
+            <xsd:element name="city" type="xsd:string"/>
+            <xsd:element name="zip" type="testzip2"/>
+            <xsd:element name="hdate" type="xsd:date"/>
+        </xsd:sequence>
+
+        <xsd:attribute name="eno" type="fourdigits2" use="required" /> 
+    </xsd:complexType>
+
+
+    <xsd:simpleType name="testzip2">   
+        <xsd:restriction base="xsd:string">     
+            <xsd:pattern value='[0-9]{5}(-[0-9]{4})?'/>   
+        </xsd:restriction> 
+    </xsd:simpleType> 
+
+
+
+    <!--Parts -->
+
+    
+
+
+
+
+
+
 
 
 
