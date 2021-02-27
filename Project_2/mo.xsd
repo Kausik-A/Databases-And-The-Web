@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xsd:schema 
+xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    
+    <xsd:element name="mo" type="motype"/>
+
+    <xsd:complexType name="motype">
+        <xsd:sequence>
+            <xsd:element name="customers" type="customerstag" minOccurs="0" maxOccurs="unbounded"/>
+            <xsd:element name="employees" type="employeestag"/>
+            <xsd:element name="parts" type="partstag"/>
+            <xsd:element name="orders" type="orderstag"/>
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:complexType name="customerstag">
+            <xsd:sequence>
+                <xsd:element name="customer" minOccurs="0" maxOccurs="unbounded" type="mychild"/>
+            </xsd:sequence>
+    </xsd:complexType>
+
+
+    <xsd:simpleType name="fourdigits">
+            <xsd:restriction base="xsd:int">
+                <xsd:minInclusive value="1000"/>
+                <xsd:maxInclusive value="9999"/>
+            </xsd:restriction>
+        </xsd:simpleType>  
+    
+    <xsd:complexType name="mychild" >
+         
+        <xsd:sequence>
+            <!-- <xsd:element name="customer" type="testcustomer"/> -->
+            <xsd:element name="cname" type="xsd:string"/>
+            <xsd:element name="street" type="xsd:string"/>
+            <xsd:element name="city" type="xsd:string"/>
+            <xsd:element name="zip" type="testzip"/>
+            <xsd:element name="phone" type="testphone"/>
+        </xsd:sequence>
+
+        <xsd:attribute name="cno" type="fourdigits" use="required" /> 
+    </xsd:complexType>
+
+
+    <xsd:simpleType name="testzip">   
+        <xsd:restriction base="xsd:string">     
+            <xsd:pattern value='[0-9]{5}(-[0-9]{4})?'/>   
+        </xsd:restriction> 
+    </xsd:simpleType> 
+
+    <xsd:simpleType name="testphone">   
+        <xsd:restriction base="xsd:string">     
+            <xsd:pattern value='[0-9]{3}-[0-9]{3}-[0-9]{4}'/>   
+        </xsd:restriction> 
+    </xsd:simpleType> 
+
+    <!--- Employee part -->
+
+
+
+</xsd:schema>

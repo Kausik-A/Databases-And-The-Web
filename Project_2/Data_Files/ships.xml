@@ -1,0 +1,42 @@
+
+<ships>
+  <class name = "Kongo" type = "be" country = "Japan" 
+         numGuns = "8" bore = "14" displacement = "32000">
+      <ship name = "Kongo" launched = "1913" />
+      <ship name = "Hiei" launched = "1914" />
+      <ship name = "Kirishima" launched = "1915">
+        <battle outcome = "sunk">Guadalcanal</battle>
+      </ship>
+      <ship name = "Haruna" launched = "1915" />
+  </class>
+
+  <class name = "North Carolina" type = "bb" country = "USA"
+         numGuns = "9" bore = "16" displacement = "37000">
+    <ship name = "North Carolina" launched = "1941" />
+    <ship name = "Washington" launched = "1941">
+      <battle outcome = "ok">Guadalcanal</battle>
+    </ship>
+  </class>
+  <class name = "Tennessee" type = "bb" country = "USA"
+         numGuns = "12" bore = "14" displacement = "32000">
+    <ship name = "Tennessee" launched = "1920">
+      <battle outcome = "ok">Surigao Strait</battle>
+    </ship>
+    <ship name = "California" launched = "1921">
+      <battle outcome = "ok">Surigao Strait</battle>
+    </ship>
+  </class>
+  <class name = "King George V" type = "bb" country = "Great Britain"
+         numGuns = "10" bore = "14" displacement = "32000">
+    <ship name = "King George V" launched = "1940" />
+    <ship name = "Prince of Wales" launched = "1941">
+      <battle outcome = "damaged">Denmark Strait</battle>
+      <battle outcome = "sunk">Malaya</battle>
+    </ship>
+    <ship name = "Duke of York" launched = "1941">
+      <battle outcome = "ok">North Cape</battle>
+    </ship>
+    <ship name = "Howe" launched = "1942" />
+    <ship name = "Anson" launched = "1942" />
+  </class>
+</ships>
