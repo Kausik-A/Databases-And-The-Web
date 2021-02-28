@@ -1,0 +1,106 @@
+<?xml version = "1.0"?> 
+<?xml-stylesheet type="text/xsl" href="form.xsl"?>
+<dataInputForm id="1">
+<title> 
+  <caption>Classes Registration Page</caption>
+</title>
+  
+<textbox datatype="string">
+  <name>firstname</name> 
+  <caption>First Name:</caption>
+  <size>20</size>
+  <maxlength>3</maxlength>
+</textbox>
+
+<break></break>
+
+<textbox datatype="string">
+  <name>lastname</name> 
+  <caption>Last Name:</caption>
+  <size>20</size>
+  <maxlength>50</maxlength>
+</textbox>
+
+<break></break>
+
+<textbox datatype="string" key="key">
+  <name>sno</name> 
+  <caption>Student Number:</caption>
+  <size>9</size>
+  <maxlength>9</maxlength>
+</textbox>
+
+<break></break>
+<break></break>
+
+<checkboxes>
+  <name>courseno</name> 
+  <caption>Check classes you are enrolled in.</caption>
+  <checkboxgroup>
+    <checkbox status="checked">
+      <value>2310</value>
+      <caption>CSc 2310</caption>
+    </checkbox>   
+    <break></break>
+    <checkbox>
+      <value>4710</value> 
+      <caption>CSc 4710</caption>
+    </checkbox>   
+    <break></break>
+    <checkbox>
+      <value>8710</value> 
+      <caption>CSc 8710</caption>
+    </checkbox>   
+  </checkboxgroup>
+</checkboxes>
+
+<break></break>
+<break></break>
+
+<select>
+  <name>status</name>
+  <caption>What is your residence status?</caption>
+  <options>
+    <option>
+      <value>on</value>
+      <caption>On-Campus</caption>
+    </option>
+    <option>
+      <value>off</value>
+      <caption>Off-Campus</caption>
+    </option>
+  </options>
+</select>
+
+<break></break>
+<break></break>     
+
+<radio>
+  <name>semester</name>
+  <caption>Choose a semester</caption>
+  <radiogroup>
+    <radioelement>
+      <value>spring</value>
+      <caption>Spring</caption>   
+    </radioelement>
+    <break></break>
+    <radioelement>
+      <value>summer</value>
+      <caption>Summer</caption>   
+    </radioelement>
+    <break></break>
+    <radioelement>
+      <value>fall</value>
+      <caption>Fall</caption>   
+    </radioelement>
+  </radiogroup>
+</radio>
+
+<break></break>
+<break></break>
+
+<submit>
+  <caption>Click Here</caption>
+</submit>
+
+</dataInputForm>
