@@ -9,7 +9,6 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
             <body>
                 <h2><xsl:value-of select="dataInputForm/title/caption"/></h2> 
                 <br></br>
-                <br></br>
             </body>
             
             <form action="">
@@ -19,6 +18,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                     
                     <label for="fname"><xsl:value-of select="caption"/></label>
                     <input type="text" id="fname" name="{name/text()}" maxlength='{maxlength/text()}' size='{size/text()}'></input> <br></br>
+                    <br></br>
        
                 </xsl:for-each> 
                 
@@ -63,6 +63,8 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                 <br></br>
                 <br></br>
 
+                
+                
                 <!-- Radio -->
 
                 <xsl:for-each select="dataInputForm/radio">
@@ -86,22 +88,22 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                 <br></br>
                 <br></br>
 
-                <!--Multiselect -->
+            <xsl:for-each select="dataInputForm/multiselect">
 
-                <xsl:for-each select="dataInputForm/multiselect">
+                <label for="{name/text()}"><xsl:value-of select="caption"/></label>
+                <br></br>
+                <br></br>
 
-                    <label for="{name/text()}"><xsl:value-of select="caption"/></label>
-                    <br></br>
-                    <br></br>
+                <select name="test2" id="test2" multiple="{size/text()}">
+                       <xsl:for-each select="options/option">
 
-                 <select name="test2" id="test2" multiple="{size/text()}">
-                   <xsl:for-each select="options/option">
+                            <option value="{value/text()}"><xsl:value-of select="caption"/></option>
 
-                          <option value="{value/text()}"><xsl:value-of select="caption"/></option>
-
-
-                    </xsl:for-each>
+                        </xsl:for-each>
                 </select> 
+
+
+            </xsl:for-each>
 
 
             </form> 
