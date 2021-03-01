@@ -25,7 +25,10 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                 <!-- CheckBox -->
                 <xsl:for-each select="dataInputForm/checkboxes">
 
-                        <h4><xsl:value-of select="caption"/></h4> 
+                        <label for="fname"><xsl:value-of select="caption"/></label>
+                        <br></br>
+                        <br></br>
+
                         
                        <xsl:for-each select="checkboxgroup/checkbox">
 
