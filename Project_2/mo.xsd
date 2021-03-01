@@ -13,6 +13,7 @@ xmlns:xsd="http://www.w3.org/2001/XMLSchema">
             <xsd:element name="orders" type="orderstag"/>
         </xsd:sequence>
     </xsd:complexType>
+    
 
     <xsd:complexType name="customerstag">
             <xsd:sequence>
@@ -131,14 +132,61 @@ xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 
      <!-- orders -->
 
+     <xsd:complexType name="orderstag">
+            <xsd:sequence>
+                <xsd:element name="order" minOccurs="0" maxOccurs="unbounded" type="mychild4"/>
+            </xsd:sequence>
+    </xsd:complexType>
 
+     
 
+    <xsd:simpleType name="fourdigits4">
+            <xsd:restriction base="xsd:int">
+                <xsd:minInclusive value="1000"/>
+                <xsd:maxInclusive value="99999"/>
+            </xsd:restriction>
+        </xsd:simpleType>  
 
+    <xsd:simpleType name="fourdigits5">
+        <xsd:restriction base="xsd:int">
+            <xsd:minInclusive value="1000"/>
+            <xsd:maxInclusive value="9999"/>
+        </xsd:restriction>
+    </xsd:simpleType>
 
+    <xsd:simpleType name="fourdigits6">
+            <xsd:restriction base="xsd:int">
+                <xsd:minInclusive value="1000"/>
+                <xsd:maxInclusive value="9999"/>
+            </xsd:restriction>
+        </xsd:simpleType>
+    
+    <xsd:complexType name="mychild4" >
+         
+        <xsd:sequence>
+            <xsd:element name="receivedDate" type="xsd:date"/>
+            <xsd:element name="shippedDate" type="xsd:date"/>
+            <xsd:element name="items" type="testitems"/>
+        </xsd:sequence>
 
+        <xsd:attribute name="ono" type="fourdigits4" use="required" /> 
+        <xsd:attribute name="takenBy" type="fourdigits5" use="required" />
+        <xsd:attribute name="customer" type="fourdigits5" use="required" />
 
+    </xsd:complexType>
 
+    <xsd:complexType name="testitems">
+        <xsd:sequence>
+            <xsd:element name="item" type="testitems2"/>
+        </xsd:sequence>
+    </xsd:complexType>
 
+    <xsd:complexType name="testitems2">
+        <xsd:sequence>
+            <xsd:element name="partNumber" type="fourdigits3"/>
+            <xsd:element name="quantity" type="xsd:positiveInteger"/>
+        </xsd:sequence>
+    </xsd:complexType>
 
 
 </xsd:schema>
