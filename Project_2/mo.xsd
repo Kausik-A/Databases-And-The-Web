@@ -137,19 +137,6 @@
     </xsd:complexType>
 
      
-    <xsd:complexType name="mychild4" >
-         
-        <xsd:sequence>
-            <xsd:element name="receivedDate" type="xsd:date"/>
-            <xsd:element name="shippedDate" type="xsd:date"/>
-            <xsd:element name="items" type="testitems"/>
-        </xsd:sequence>
-
-        <xsd:attribute name="ono" type="fourdigits4" use="required" /> 
-        <xsd:attribute name="takenBy" type="fourdigits5" use="required" />
-        <xsd:attribute name="customer" type="fourdigits6" use="required" />
-
-    </xsd:complexType>
 
     <xsd:simpleType name="fourdigits4">
             <xsd:restriction base="xsd:int">
@@ -171,10 +158,24 @@
                 <xsd:maxInclusive value="9999"/>
             </xsd:restriction>
         </xsd:simpleType>
+    
+    <xsd:complexType name="mychild4" >
+         
+        <xsd:sequence>
+            <xsd:element name="receivedDate" type="xsd:date"/>
+            <xsd:element name="shippedDate" minOccurs="0" type="xsd:date"/>
+            <xsd:element name="items" type="testitems"/>
+        </xsd:sequence>
+
+        <xsd:attribute name="ono" type="fourdigits4" use="required" /> 
+        <xsd:attribute name="takenBy" type="fourdigits5" use="required" />
+        <xsd:attribute name="customer" type="fourdigits6" use="required" />
+
+    </xsd:complexType>
 
     <xsd:complexType name="testitems">
         <xsd:sequence>
-            <xsd:element name="item" type="testitems2"/>
+            <xsd:element name="item" minOccurs="0" maxOccurs="unbounded" type="testitems2"/>
         </xsd:sequence>
     </xsd:complexType>
 

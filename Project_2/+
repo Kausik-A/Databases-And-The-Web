@@ -1,0 +1,7 @@
+for $x in db:open("companyDB")
+where $x/department/dname = "Research"
+return data($x/department/employees/@essns)
+        
+
+       
+
