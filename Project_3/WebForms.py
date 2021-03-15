@@ -17,10 +17,24 @@ def generate_html(form):
 
         for x in combinedlist:
             print(x['etype'])
+
+            #textbox generating
             if x['etype'] == 'textbox':
                 #print('yes')
                 f.write(" <label for=%s> %s </label> \n <input type='text' id='%s' name='%s' maxlength='%s' size='%s'><br><br> \n\n" % (x['ename'] , x['caption'],x['ename'],x['ename'],(x['maxlength']),x['size']))
-        
+
+            #checkbox generating
+            if x['etype'] == 'checkbox':
+                print("Im insideeeeee")
+                for y in x['group']:
+                    print(y['value'])
+                 
+
+
+                 #<input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+                 #<label for="vehicle1"> I have a bike</label><br>
+                  
+
         # Closing the HTML tag
         f.write("</form> \r\n")
         f.write("</HTML> \r\n")
